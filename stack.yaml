@@ -3,5 +3,6 @@ resolver: nightly-2020-09-09
 extra-deps:
   - liquidhaskell-0.8.10.2
   - liquid-base-4.14.1.0
+  - liquid-containers-0.6.2.1
   - liquid-ghc-prim-0.6.1
   - Diff-0.3.4

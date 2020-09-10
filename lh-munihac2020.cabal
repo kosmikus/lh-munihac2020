@@ -12,5 +12,6 @@ library
     -fplugin=LiquidHaskell
   build-depends:
     liquidhaskell >= 0.8.10 && < 0.8.12,
-    liquid-base >= 4.14.0 && < 4.14.2
+    liquid-base >= 4.14.0 && < 4.14.2,
+    liquid-containers >= 0.6.2.1 && < 0.6.3
 

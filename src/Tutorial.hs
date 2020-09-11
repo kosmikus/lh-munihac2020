@@ -9,7 +9,7 @@ ex1 = 61
 {-@ tail :: { xs : [a] | len xs > 0 } -> { ys : [a] | len ys == len xs - 1 } @-}
 tail :: [a] -> [a]
 tail (_ : xs) = xs
-tail _        = impossible "impossible: tail on empty list"
+tail _        = error "impossible: tail on empty list"
 
 {-@ example :: { xs : [a] | len xs >= 4 } -> { ys : [a] | len ys < len xs } @-}
 example :: [a] -> [a]
@@ -44,9 +44,11 @@ data Weekday = Mo | Tu | We | Th | Fr | Sa | Su
 weekday :: Weekday
 weekday = Sa
 
+{-
 {-@ impossible :: { s : String | False } -> a @-}
 impossible :: String -> a
 impossible message = error message
+-}
 
 insert :: Ord a => a -> [a] -> [a]
 insert x []       = [x]
